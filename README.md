@@ -1,79 +1,51 @@
-# movie-ratings
+# Movie Ratings Analysis – PODS
 
-This repository contains data analysis tasks completed as part of the *Principles of Data Science II* (PODS) course at NYU, using a large-scale movie ratings dataset. The dataset includes ratings from over 1000 participants across 400 movies, with additional demographic and psychological data. Each analysis task builds foundational skills in statistics, regression, and hypothesis testing, using real-world behavioral data.
+This repo contains data analysis tasks completed for *Principles of Data Science II* at NYU. Using movie ratings from 1,097 participants across 400 films, the tasks apply statistical analysis, regression, and hypothesis testing to real behavioral data.
 
----
+## Dataset
 
-## 📁 Dataset
+- File: `movieDataReplicationSet.csv`
+- 400 movies rated 0–4 (missing values = unrated)
+- Includes participant metadata: income, education, SES
 
-The dataset used is `movieDataReplicationSet.csv`, which contains:
-- Ratings on a 0–4 scale (with `NaN` for unrated movies)
-- Participant-level metadata (e.g., income, education, SES)
-- 400 movies including titles like *Pulp Fiction*, *Kill Bill*, *Star Wars*, *Interstellar*, and more
+*Note: Dataset not included due to privacy restrictions.*
 
-> **Note**: The dataset is not included in this repo due to licensing and privacy restrictions.
-
----
-
-## 🧠 Tasks Breakdown
+## Tasks
 
 ### D1: Central Tendency
-- Compute **mean**, **median**, and **mode** ratings for each movie
-- Determine overall average movie rating
-- Identify highest/lowest rated films using different metrics
+- Mean, median, and mode for each movie
+- Overall average rating
+- Identify highest/lowest-rated movies
 
 ### D2: Dispersion & Correlation
-- Calculate **standard deviation** and **mean absolute deviation** for each movie
-- Compute pairwise **Pearson correlations** between all movies
-- Report summary statistics of dispersion and correlation
+- Standard deviation and mean absolute deviation
+- Pearson correlation matrix (400x400)
+- Mean/median of dispersion and correlation
 
-### D3: Simple Linear Regression
-- Build simple regression models:
-  - Predict *Star Wars I* from *Star Wars II*
-  - Predict *Titanic* from *Star Wars I*
-- Report slope, intercept, residuals, and \( R^2 \)
+### D3: Simple Regression
+- Regress *Star Wars I* on *Star Wars II*
+- Regress *Titanic* on *Star Wars I*
+- Coefficients, residuals, R²
 
 ### D4: Statistical Control
-- Correlate **education** and **income**
-- Compute **partial correlation** controlling for **SES**
-- Build a **multiple regression** predicting income from education and SES
+- Correlation: education vs. income
+- Partial correlation (control for SES)
+- Multiple regression: income ~ SES + education
 
-### D6: Parametric Significance Testing
-- Conduct **independent** and **paired** t-tests between:
-  - *Kill Bill Vol. I*, *Kill Bill Vol. II*, and *Pulp Fiction*
-- Report \( t \)-values, \( p \)-values, and degrees of freedom
+### D6: Parametric Tests
+- Independent & paired t-tests between:
+  - *Kill Bill Vol. I*, *Vol. II*, *Pulp Fiction*
 
-### D7: Nonparametric Significance Testing
-- Use **Mann-Whitney U** and **Kolmogorov-Smirnov** tests to:
-  - Compare medians and distributions of:
-    - *Indiana Jones* trilogy
-    - *Ghostbusters* remake
-    - *Finding Nemo*
-    - *Interstellar*
-    - *Wolf of Wall Street*
+### D7: Nonparametric Tests
+- Mann-Whitney U and KS tests on:
+  - *Indiana Jones*, *Ghostbusters (2016)*, *Finding Nemo*, *Interstellar*, *Wolf of Wall Street*
 
----
+## Tools
 
-## 📊 Tools & Libraries
+- `pandas`, `numpy`, `scikit-learn`, `scipy.stats`
 
-- [`pandas`](https://pandas.pydata.org/) for data manipulation  
-- [`numpy`](https://numpy.org/) for numerical analysis  
-- [`scikit-learn`](https://scikit-learn.org/) for regression models  
-- [`scipy.stats`](https://docs.scipy.org/doc/scipy/) for statistical tests  
-- [`matplotlib`](https://matplotlib.org/) (optional) for visualizations
+## Author
 
----
-
-## 📌 Highlights
-
-- Clean, modular analysis of real-world, messy data with missing values
-- Demonstrates key statistical concepts: central tendency, dispersion, correlation, regression, and significance testing
-- Organized to align with weekly PODS assignments for reproducibility
-
----
-
-## 🧑‍💻 Author
-
-**Tomas Gutierrez**  
-NYU Double Major — Data Science & Recorded Music  
-[GitHub: @tomasgutierrez](https://github.com/tomasgutierrez)
+Tomas Gutierrez  
+NYU | Data Science & Recorded Music  
+[github.com/tomasgutierrez](https://github.com/tomasgutierrez)
